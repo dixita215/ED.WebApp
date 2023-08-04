@@ -12,7 +12,7 @@ import { ItemService } from '../Services/item.service';
 export class ItemDetailComponent implements OnInit {
   itemId: number | null = null;
   item: Item | null = null;
-  selectedQuantity: number = 0 ;
+  selectedQuantity: number = 1 ;
   cartItems: Item[] = [];
 
   constructor(private route: ActivatedRoute, private router: Router,

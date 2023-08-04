@@ -13,7 +13,7 @@ namespace ED.Service.Interfaces
         Task<CartItem> GetSingleCartItems(int itemId);
         Task<CartItem> AddCartItem(CartItem entity);
         Task<bool> UpdateCartItem(CartItem entity);
-        Task<bool> RemoveCartItem(int itemId);        
+        Task<bool> RemoveCartItem(CartItem entity);        
 
     }
 }

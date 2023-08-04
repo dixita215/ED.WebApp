@@ -106,7 +106,7 @@ namespace ED.Web.Controllers
 
             if (cartItem.Quantity == 0)
             {
-                await _cartRepository.RemoveCartItem(id);
+                await _cartRepository.RemoveCartItem(cartItem);
             }
             else
             {
@@ -120,14 +120,14 @@ namespace ED.Web.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCartItem(int id)
         {
-            var cartItemList = await _cartRepository.GetAllCartItems(1);
+          
             var cartItem = await _cartRepository.GetSingleCartItems(id);
             if (cartItem == null)
             {
                 return NotFound();
             }
 
-            await _cartRepository.RemoveCartItem(cartItem.ItemId);
+            await _cartRepository.RemoveCartItem(cartItem);
 
 
             return Ok();

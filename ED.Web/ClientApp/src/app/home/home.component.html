@@ -1,24 +1,28 @@
-<h1 id="tableLabel">Items</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<div class="item-list">
+  <h1 id="tableLabel">Items</h1>
+  <p>This component demonstrates fetching data from the server.</p>
 
-<p *ngIf="!items"><em>Loading...</em></p>
+  <p class="loading-message" *ngIf="!items"><em>Loading...</em></p>
 
-<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="items">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Description</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of items">
-      <td>{{ item.productName }}</td>
-      <td>{{ item.price }}</td>
-      <td>{{ item.description }}</td>
-      <td> <button (click)="onViewButtonClick(item.id)">View</button></td>
-    </tr>
-  </tbody>
-</table>
+  <table class="table table-striped" aria-labelledby="tableLabel" *ngIf="items">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <td>{{ item.productName }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.description }}</td>
+        <td>
+          <button class="view-button" (click)="onViewButtonClick(item.id)">View</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

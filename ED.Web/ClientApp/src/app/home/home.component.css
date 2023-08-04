@@ -1,0 +1,52 @@
+/* item-list.component.css */
+.item-list {
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.item-list h1 {
+  color: #333;
+}
+
+.item-list p {
+  margin-top: 10px;
+}
+
+.loading-message {
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.view-button {
+  padding: 6px 12px;
+  font-size: 12px;
+  border: none;
+  border-radius: 3px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+}

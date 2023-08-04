@@ -68,12 +68,12 @@ namespace ED.Service
             }
         }
 
-        public async Task<bool> RemoveCartItem(int id)
+        public async Task<bool> RemoveCartItem(CartItem entity)
         {
             _logger.LogInformation("Delete method called");
             try
             {
-                var entity = await _context.CartItems.FindAsync(id);
+                //var entity = await _context.CartItems.FindAsync(id);
                 if (entity == null)
                 {
                     _logger.LogWarning("Cart item not found for deletion");
