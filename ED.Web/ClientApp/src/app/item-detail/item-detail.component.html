@@ -1,0 +1,14 @@
+<!-- item-detail.component.html -->
+<div *ngIf="item">
+  <h3>Item Detail</h3>
+  <p>Item ID: {{ item.id }}</p>
+  <p>Name: {{ item.productName }}</p>
+  <p>Price(AUD): {{ item.price }}</p>
+  <p>Description: {{ item.description }}</p>
+  <label for="quantity">Quantity:</label>
+  <input type="number" id="quantity" [(ngModel)]="selectedQuantity" min="1" max="10">
+  <button (click)="addToCart(item, selectedQuantity)">Add to Cart</button>
+
+
+  <button (click)="continueShopping()">Continue Shopping</button>
+</div>
